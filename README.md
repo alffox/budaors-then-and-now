@@ -3,6 +3,9 @@
 This is a school project showcasing historical and modern photos of **Budaörs, Hungary**.  
 Each image pair is displayed using an interactive slider: the old photograph appears on one side, and the new photograph on the other. By hovering (desktop) or tapping/dragging (mobile), viewers can compare how each location has changed over time.
 
+🌐 **Live website:**  
+https://alffox.github.io/budaors-then-and-now/
+
 ## Features
 - Side-by-side “before and after” photo comparison  
 - Works on both desktop (hover) and mobile (tap/drag)  
