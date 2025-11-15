@@ -6,9 +6,5 @@ Each image pair is displayed using an interactive slider: the old photograph app
 🌐 **Live website:**  
 https://alffox.github.io/budaors-then-and-now/
 
-## Features
-- Side-by-side “before and after” photo comparison  
-- Works on both desktop (hover) and mobile (tap/drag)  
-
 ## Purpose
 Created as a visual exploration of urban and cultural changes in **Budaörs** over the past century, illustrating how the city evolved through its landmarks, streets, and everyday spaces.
