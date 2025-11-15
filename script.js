@@ -1,10 +1,33 @@
-const oldImg = document.getElementById('oldImg');
-const divider = document.getElementById('divider');
-const container = document.querySelector('.slider-container');
+const sliders = document.querySelectorAll('.slider-container');
 
-container.addEventListener('mousemove', (e) => {
-  const rect = container.getBoundingClientRect();
-  const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
-  divider.style.left = x + 'px';
-  oldImg.style.clipPath = `inset(0 0 0 ${x}px)`;
+sliders.forEach(slider => {
+  const oldImg = slider.querySelector('.old');
+  const divider = slider.querySelector('.divider');
+
+  function moveSlider(clientX) {
+    const rect = slider.getBoundingClientRect();
+    let x = clientX - rect.left;
+
+    x = Math.max(0, Math.min(x, rect.width));
+
+    divider.style.left = `${x}px`;
+    oldImg.style.clipPath = `inset(0 0 0 ${x}px)`;
+  }
+
+  // Desktop hover (keep as is)
+  slider.addEventListener('mousemove', (e) => {
+    moveSlider(e.clientX);
+  });
+
+  // Mobile tap
+  slider.addEventListener('touchstart', (e) => {
+    const touch = e.touches[0];
+    moveSlider(touch.clientX);
+  });
+
+  // Mobile drag (optional but enables smooth follow)
+  slider.addEventListener('touchmove', (e) => {
+    const touch = e.touches[0];
+    moveSlider(touch.clientX);
+  });
 });
